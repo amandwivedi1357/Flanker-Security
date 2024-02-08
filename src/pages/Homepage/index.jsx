@@ -412,7 +412,7 @@ const HomepagePage = () => {
                     label="Advance Technology"
                   ></CheckBox>
                   <CheckBox
-                    className="font-semibold ml-5 sm:ml-[0] text-base text-black-900 text-left tracking-[0.25px]"
+                    className="font-semibold ml-10 sm:ml-[0] text-base text-black-900 text-left tracking-[0.25px]"
                     inputClassName="mr-[5px]"
                     name="emergencyhelp"
                     id="emergencyhelp"
