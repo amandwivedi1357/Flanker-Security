@@ -239,18 +239,9 @@ const ContactformPage = () => {
                       Hyderabad - 500085
                     </Text>
                   </div>
-                  <div className="flex flex-row gap-[23px] items-center justify-start mt-[45px] w-[38%] md:w-full">
-                    <Img
-                      className="h-8 w-8"
-                      src="images/img_phone_black_900.svg"
-                      alt="phone"
-                    />
-                    <Text
-                      className="text-black-900_e5_01 text-lg tracking-[0.25px]"
-                      size="txtLatoRegular18"
-                    >
-                      91007 92007
-                    </Text>
+                  <div className="flex flex-row gap-[23px] items-center justify-start mt-[45px] w-2/5 md:w-full">
+                    <Img className="h-8 w-8" src="images/img_phone_black_900.svg" alt="phone" />
+                    <Text className="text-black-900_e5_01 text-lg tracking-[0.25px]">91007 92007</Text>
                   </div>
                   <div className="flex flex-row gap-[29px] items-start justify-start md:ml-[0] ml-[5px] mt-12 w-[58%] md:w-full">
                     <Img
