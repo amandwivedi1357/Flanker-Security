@@ -18,7 +18,7 @@ const AboutusPage = () => {
               />
               <div className="absolute bottom-[31%] flex flex-col gap-[22px] inset-x-[0] items-center justify-start mx-auto">
                 <Text
-                  className="capitalize leading-[89.00px] md:text-5xl text-6xl text-center text-white-A700 tracking-[0.25px] w-full"
+                  className="capitalize leading-[89.00px] md:text-5xl text-6xl text-center text-white-A700 tracking-[0.25px] w-[70%]"
                   size="txtPoppinsBold60"
                 >
                   Your Partner in Uncompromised Security
@@ -40,7 +40,7 @@ const AboutusPage = () => {
               alt="rectangle22076"
             />
             <div className="flex flex-col md:gap-10 gap-[166px] justify-start md:mt-0 mt-[125px]">
-              <div className="flex flex-col gap-[19px] items-start justify-start md:ml-[0] ml-[21px]">
+              <div className="flex flex-col gap-[19px] items-start justify-start md:ml-[0] ml-[125px]">
                 <Text
                   className="text-gray-600 text-sm tracking-[2.00px] uppercase"
                   size="txtRedHatDisplayRomanMedium14"

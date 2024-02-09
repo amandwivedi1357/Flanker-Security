@@ -239,7 +239,7 @@ const ContactformPage = () => {
                       Hyderabad - 500085
                     </Text>
                   </div>
-                  <div className="flex flex-row gap-[23px] items-center justify-start mt-[45px] w-[38%] md:w-full">
+                  <div className="flex flex-row gap-[23px] items-center justify-start mt-[45px] w-2/5 md:w-full">
                     <Img
                       className="h-8 w-8"
                       src="images/img_phone_black_900.svg"
