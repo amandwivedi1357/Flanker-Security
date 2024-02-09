@@ -35,12 +35,13 @@ const sizeClasses = {
   txtRedHatDisplayRomanBold36: "font-bold font-redhatdisplay",
 };
 
-const Text = ({ children, className = "", size, as, ...restProps }) => {
+const Text = ({ children, className = "", size, as, isActive, onClick, ...restProps }) => {
   const Component = as || "p";
 
   return (
     <Component
-      className={`text-left ${className} ${size && sizeClasses[size]}`}
+      className={`text-left ${className} ${size && sizeClasses[size]} ${isActive ? 'border-b-orange-400' : ''}`}
+      onClick={onClick} // Add onClick handler here
       {...restProps}
     >
       {children}

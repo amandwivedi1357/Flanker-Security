@@ -1,8 +1,10 @@
 import React from "react";
 
 import { Text } from "components";
+import { useNavigate } from "react-router-dom";
 
 const Footer = (props) => {
+  const navigate = useNavigate()
   return (
     <>
       <footer className={props.className}>
@@ -61,7 +63,7 @@ const Footer = (props) => {
                 </Text>
                 <ul className="flex flex-col items-start justify-start md:w-full common-column-list">
                   <li>
-                    <Text
+                    <Text onClick={()=>navigate('/')}
                       className="capitalize text-base text-white-A700_bc tracking-[0.16px]"
                       size="txtPoppinsRegular16"
                     >
@@ -69,7 +71,7 @@ const Footer = (props) => {
                     </Text>
                   </li>
                   <li>
-                    <Text
+                    <Text onClick={()=>navigate('/aboutus')}
                       className="capitalize mt-[7px] text-base text-white-A700_bc tracking-[0.16px]"
                       size="txtPoppinsRegular16"
                     >
@@ -77,7 +79,7 @@ const Footer = (props) => {
                     </Text>
                   </li>
                   <li>
-                    <Text
+                    <Text onClick={()=>navigate('/services')}
                       className="capitalize mt-[7px] text-base text-white-A700_bc tracking-[0.16px]"
                       size="txtPoppinsRegular16"
                     >
@@ -85,7 +87,7 @@ const Footer = (props) => {
                     </Text>
                   </li>
                   <li>
-                    <Text
+                    <Text onClick={()=>navigate('/gallery')}
                       className="capitalize mt-2.5 text-base text-white-A700_bc tracking-[0.16px]"
                       size="txtPoppinsRegular16"
                     >
@@ -93,7 +95,7 @@ const Footer = (props) => {
                     </Text>
                   </li>
                   <li>
-                    <Text
+                    <Text onClick={()=>navigate('/contactform')}
                       className="capitalize mt-1.5 text-base text-white-A700_bc tracking-[0.16px]"
                       size="txtPoppinsRegular16"
                     >

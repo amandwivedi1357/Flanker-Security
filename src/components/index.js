@@ -7,3 +7,4 @@ export { PagerIndicator } from "./PagerIndicator";
 export { SelectBox } from "./SelectBox";
 export { Slider } from "./Slider";
 export { Text } from "./Text";
+export {Banner} from "./Banner"
