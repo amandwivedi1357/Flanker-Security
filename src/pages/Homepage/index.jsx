@@ -1,21 +1,28 @@
 import React from "react";
 
 import {
+  Banner,
   Button,
   CheckBox,
   Img,
   Line,
+
   List,
   PagerIndicator,
   Slider,
   Text,
 } from "components";
+import guard from "../../assets/SVG/Guard.svg"
+import { FaCheck } from "react-icons/fa6";
 import Footer from "components/Footer";
+import { useNavigate } from "react-router-dom";
 
 const HomepagePage = () => {
   const sliderRef = React.useRef(null);
   const [sliderState, setsliderState] = React.useState(0);
 
+  const navigate = useNavigate();
+  
   return (
     <>
       <div className="bg-white-A700 flex flex-col items-center justify-start mx-auto w-full">
@@ -43,18 +50,14 @@ const HomepagePage = () => {
                 </Text>
                 <div className="flex flex-row font-poppins gap-[21px] items-center justify-start mt-11 w-[41%] md:w-full">
                   <div className="flex flex-col items-center justify-start w-[47%]">
-                    <Button
-                      className="capitalize cursor-pointer font-medium h-11 leading-[normal] min-w-[143px] text-base text-center tracking-[0.16px]"
+                    <button on
+                      className="hover:bg-orange-400 hover:text-black-900 capitalize border border-orange-400 border-solid shadow-bs text-orange-400 cursor-pointer font-medium h-11 leading-[normal] min-w-[143px] text-base  text-center tracking-[0.16px]"
                       variant="outline"
                     >
                       contact us
-                    </Button>
+                    </button>
                   </div>
-                  <div className="flex flex-col items-center justify-start w-[47%]">
-                    <Button className="!text-black-900 border border-orange-400 border-solid capitalize cursor-pointer font-medium h-11 leading-[normal] min-w-[143px] text-base text-center tracking-[0.16px]">
-                      contact us
-                    </Button>
-                  </div>
+          
                 </div>
               </div>
             </div>
@@ -67,49 +70,49 @@ const HomepagePage = () => {
               <div className="bg-white-A700_11 flex flex-1 flex-col items-center justify-start p-[30px] sm:px-5 shadow-bs1 w-full">
                 <div className="flex md:flex-col flex-row md:gap-5 items-center justify-start mb-2 w-[95%] md:w-full">
                   <Img
-                    className="h-[65px] sm:h-auto sm:m-[] sm:ml-[-75%] object-cover sm:w-[13%] w-[7%] md:w-full"
+                    className="h-[65px] cursor-pointer sm:h-auto sm:m-[] sm:ml-[-75%] object-cover sm:w-[13%] w-[7%] md:w-full"
                     src="images/img_whatsappimage20231213.png"
                     alt="whatsappimageTwenty"
                   />
-                  <Text
-                    className="bg-clip-text bg-gradient1  capitalize sm:ml-[-30px] md:ml-[0] ml-[9px] sm:mt-[-13.5%] text-transparent text-xl tracking-[0.25px]"
+                 <span onClick={()=>navigate('/')}> <Text
+                    className="bg-clip-text bg-gradient1 text-orange-400  capitalize sm:ml-[-30px] md:ml-[0] ml-5 sm:mt-[-13.5%]  text-xl tracking-[0.25px]"
                     size="txtPoppinsRegular20"
                   >
                     FLANKER SECURITY
-                  </Text>
+                  </Text></span>
                   <div className="flex flex-col items-start justify-start md:ml-[0] ml-[132px] w-[32%] md:w-full">
                     <ul className="flex flex-row gap-8 sm:hidden items-start justify-between w-full common-row-list">
                       <li>
-                        <a
-                          href="javascript:"
-                          className="capitalize mb-0.5 text-base text-white-A700 tracking-[0.16px]"
+                        <p
+                           onClick={()=>navigate('/aboutus')}
+                          className="capitalize mb-0.5 text-base text-white-A700 tracking-[0.16px] "
                         >
                           <Text size="txtPoppinsMedium16">about us</Text>
-                        </a>
+                        </p>
                       </li>
                       <li>
-                        <a
-                          href="javascript:"
+                        <p
+                          onClick={()=>navigate('/services')}
                           className="capitalize mb-0.5 text-base text-white-A700 tracking-[0.16px]"
                         >
                           <Text size="txtPoppinsMedium16">Services</Text>
-                        </a>
+                        </p>
                       </li>
                       <li>
-                        <a
-                          href="javascript:"
+                        <p
+                         onClick={()=>navigate('/gallery')}
                           className="capitalize mt-0.5 text-base text-white-A700 tracking-[0.16px]"
                         >
                           <Text size="txtPoppinsMedium16">Gallery</Text>
-                        </a>
+                        </p>
                       </li>
                       <li>
-                        <a
-                          href="javascript:"
+                        <p
+                           onClick={()=>navigate('/contactform')}
                           className="capitalize text-base text-white-A700 tracking-[0.16px]"
                         >
                           <Text size="txtPoppinsMedium16">Contact Us</Text>
-                        </a>
+                        </p>
                       </li>
                     </ul>
                     <Line className="bg-orange-400 h-[3px] mt-[3px] rounded-[1px] w-[19%]" />
@@ -228,10 +231,10 @@ const HomepagePage = () => {
                     Trust us with the security of what’s important to you
                   </Text>
                 </div>
-                <div className="bg-white-A700 flex md:flex-1 flex-col items-start justify-end md:ml-[0] ml-[225px] p-[27px] sm:px-5 rounded-sm w-[22%] md:w-full">
+                <div className="bg-white-A700 hover:bg-orange-400 cursor-pointer flex md:flex-1 flex-col items-start justify-end md:ml-[0] ml-[225px] p-[27px] sm:px-5 rounded-sm w-[22%] md:w-full">
                   <Img
-                    className="h-[60px] mt-[35px]"
-                    src="images/img_guard.svg"
+                    className="h-[60px] mt-[35px] hover:text-black-900"
+                    src='images/img_guard_black_900.svg'
                     alt="guard"
                   />
                   <Text
@@ -247,10 +250,10 @@ const HomepagePage = () => {
                     High-quality coal that comes from.
                   </Text>
                 </div>
-                <div className="bg-white-A700 flex md:flex-1 flex-col items-start justify-end md:ml-[0] ml-[53px] p-[27px] sm:px-5 rounded-sm w-[22%] md:w-full">
+                <div className="bg-white-A700 cursor-pointer hover:bg-orange-400 flex md:flex-1 flex-col items-start justify-end md:ml-[0] ml-[53px] p-[27px] sm:px-5 rounded-sm w-[22%] md:w-full">
                   <Img
-                    className="h-[60px] mt-[35px]"
-                    src="images/img_guard.svg"
+                    className="h-[60px] mt-[35px] text-black-900"
+                    src="images/img_guard_black_900.svg"
                     alt="guard_One"
                   />
                   <Text
@@ -268,7 +271,7 @@ const HomepagePage = () => {
                 </div>
               </div>
               <div className="flex flex-1 md:flex-col flex-row md:gap-10 items-center justify-between ml-0.5 my-0 w-full">
-                <div className="bg-orange-400 flex md:flex-1 flex-col items-start justify-end p-[27px] sm:px-5 rounded-sm w-[22%] md:w-full">
+                <div className="bg-white-A700 cursor-pointer hover:bg-orange-400 flex md:flex-1 flex-col items-start justify-end p-[27px] sm:px-5 rounded-sm w-[22%] md:w-full">
                   <Img
                     className="h-[60px] mt-[35px]"
                     src="images/img_guard_black_900.svg"
@@ -287,10 +290,10 @@ const HomepagePage = () => {
                     High-quality coal that comes from.
                   </Text>
                 </div>
-                <div className="bg-white-A700 flex md:flex-1 flex-col items-start justify-end p-[25px] sm:px-5 rounded-sm w-[22%] md:w-full">
+                <div className="bg-white-A700 cursor-pointer hover:bg-orange-400 flex md:flex-1 flex-col items-start justify-end p-[25px] sm:px-5 rounded-sm w-[22%] md:w-full">
                   <Img
                     className="h-[60px] mt-[35px]"
-                    src="images/img_guard.svg"
+                    src="images/img_guard_black_900.svg"
                     alt="guard_One"
                   />
                   <Text
@@ -306,10 +309,10 @@ const HomepagePage = () => {
                     High-quality coal that comes from.
                   </Text>
                 </div>
-                <div className="bg-white-A700 flex md:flex-1 flex-col items-start justify-end p-[27px] sm:px-5 rounded-sm w-[22%] md:w-full">
+                <div className="bg-white-A700 cursor-pointer hover:bg-orange-400 flex md:flex-1 flex-col items-start justify-end p-[27px] sm:px-5 rounded-sm w-[22%] md:w-full">
                   <Img
                     className="h-[60px] mt-[35px]"
-                    src="images/img_guard.svg"
+                    src="images/img_guard_black_900.svg"
                     alt="guard_Two"
                   />
                   <Text
@@ -325,10 +328,10 @@ const HomepagePage = () => {
                     High-quality coal that comes from.
                   </Text>
                 </div>
-                <div className="bg-white-A700 flex md:flex-1 flex-col items-start justify-end p-[27px] sm:px-5 rounded-sm w-[22%] md:w-full">
+                <div className="bg-white-A700 cursor-pointer hover:bg-orange-400 flex md:flex-1 flex-col items-start justify-end p-[27px] sm:px-5 rounded-sm w-[22%] md:w-full">
                   <Img
                     className="h-[60px] mt-[35px]"
-                    src="images/img_guard.svg"
+                    src="images/img_guard_black_900.svg"
                     alt="guard_Three"
                   />
                   <Text
@@ -388,52 +391,41 @@ const HomepagePage = () => {
             >
               <div className="flex flex-col gap-[34px] items-start justify-start w-[94%] md:w-full">
                 <div className="flex sm:flex-col flex-row sm:gap-10 items-center justify-between w-full">
-                  <CheckBox
-                    className="font-semibold text-base text-black-900 text-left tracking-[0.25px]"
-                    inputClassName="mr-[5px]"
-                    name="perfectionanyti_One"
-                    id="perfectionanyti_One"
-                    label="Perfection Anytime"
-                  ></CheckBox>
-                  <CheckBox
-                    className="font-semibold text-base text-black-900 text-left tracking-[0.25px]"
-                    inputClassName="mr-[5px]"
-                    name="trainedprofessi_One"
-                    id="trainedprofessi_One"
-                    label="Trained Professionals"
-                  ></CheckBox>
+                  <span className="flex gap-3">
+                  <FaCheck 
+                    className=" mt-1 font-semibold text-base text-black-900 text-left tracking-[0.25px]"
+                  /> <span className="font-semibold  text-base text-black-900 text-left tracking-[0.25px]">Perfection Anytime</span>
+                  </span>
+                  
+                  <span className="flex gap-3 mr-4">
+                  <FaCheck 
+                    className=" mt-1 font-semibold text-base text-black-900 text-left tracking-[0.25px]"
+                  /> <span className="font-semibold  text-base text-black-900 text-left tracking-[0.25px]">Trained Professionals</span>
+                  </span>
                 </div>
-                <div className="flex sm:flex-col flex-row sm:gap-10 gap-[97px] items-center justify-start w-[92%] md:w-full">
-                  <CheckBox
-                    className="font-semibold text-base text-black-900 text-left tracking-[0.25px]"
-                    inputClassName="mr-[5px]"
-                    name="advancetechnolo_One"
-                    id="advancetechnolo_One"
-                    label="Advance Technology"
-                  ></CheckBox>
-                  <CheckBox
-                    className="font-semibold ml-10 sm:ml-[0] text-base text-black-900 text-left tracking-[0.25px]"
-                    inputClassName="mr-[5px]"
-                    name="emergencyhelp"
-                    id="emergencyhelp"
-                    label="Emergency help"
-                  ></CheckBox>
+                <div className="flex sm:flex-col flex-row sm:gap-10 gap-[97px] items-center justify-start w-[96%] md:w-full">
+                <span className="flex gap-3">
+                  <FaCheck 
+                    className=" mt-1 font-semibold text-base text-black-900 text-left tracking-[0.25px]"
+                  /> <span className="font-semibold  text-base text-black-900 text-left tracking-[0.25px]">Perfection Anytime</span>
+                  </span>
+                  <span className="flex gap-3 ml-6">
+                  <FaCheck 
+                    className=" mt-1 font-semibold text-base text-black-900 text-left tracking-[0.25px]"
+                  /> <span className="font-semibold  text-base text-black-900 text-left tracking-[0.25px]">Perfection Anytime</span>
+                  </span>
                 </div>
                 <div className="flex flex-row items-center justify-between w-[94%] md:w-full">
-                  <CheckBox
-                    className="font-semibold text-base text-black-900 text-left tracking-[0.25px]"
-                    inputClassName="mr-[5px]"
-                    name="perfectionanyti_Three"
-                    id="perfectionanyti_Three"
-                    label="Perfection Anytime"
-                  ></CheckBox>
-                  <CheckBox
-                    className="font-semibold text-base text-black-900 text-left tracking-[0.25px]"
-                    inputClassName="mr-[5px]"
-                    name="remoteguarding"
-                    id="remoteguarding"
-                    label="Remote Guarding"
-                  ></CheckBox>
+                <span className="flex gap-3">
+                  <FaCheck 
+                    className=" mt-1 font-semibold text-base text-black-900 text-left tracking-[0.25px]"
+                  /> <span className="font-semibold  text-base text-black-900 text-left tracking-[0.25px]">Perfection Anytime</span>
+                  </span>
+                  <span className="flex gap-3">
+                  <FaCheck 
+                    className=" mt-1 font-semibold text-base text-black-900 text-left tracking-[0.25px]"
+                  /> <span className="font-semibold  text-base text-black-900 text-left tracking-[0.25px]">Perfection Anytime</span>
+                  </span>
                 </div>
               </div>
             </div>
@@ -509,6 +501,7 @@ const HomepagePage = () => {
                       <Text
                         className="h-[228px] leading-[29.00px] text-[15px] text-gray-700 tracking-[0.50px] w-[228px]"
                         size="txtLatoRegular15Gray700"
+                        style={{ lineHeight: '1.93' }}
                       >
                         Top-qTop-quality Products Sourced From The Most Ideal
                         LocationsTop-quality Products Sourced From The Most
@@ -558,7 +551,7 @@ const HomepagePage = () => {
             selectedWrapperCss="inline-block md:ml-[0] mx-[4.50px] sm:ml-[0]"
             unselectedWrapperCss="inline-block md:ml-[0] mx-[4.50px] sm:ml-[0]"
           />
-          <div className="font-poppins h-[748px] md:h-[850px] mt-[102px] md:px-5 relative w-full">
+          {/* <div className="font-poppins h-[748px] md:h-[850px] mt-[102px] md:px-5 relative w-full">
             <Img
               className="h-[748px] m-auto object-cover w-full"
               src="images/img_rectangle22077.png"
@@ -627,7 +620,8 @@ const HomepagePage = () => {
                 </Button>
               </div>
             </div>
-          </div>
+          </div> */}
+          <Banner/>
           <Footer className="flex items-center justify-center mt-10 md:px-5 w-full" />
         </div>
       </div>

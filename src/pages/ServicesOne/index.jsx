@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Button, Img, List, Text } from "components";
+import { Banner, Button, Img, List, Text } from "components";
 import Footer from "components/Footer";
 import Header from "components/Header";
 
@@ -15,12 +15,12 @@ const ServicesOnePage = () => {
               src="images/img_rectangle21985_848x1440.png"
               alt="rectangle21985"
             />
-            <div className="absolute bottom-[13%] flex flex-col items-center justify-center left-[9%] w-full">
+            <div className="absolute bottom-[13%] flex flex-col items-center justify-center w-full">
               <Text
-                className="capitalize leading-[89.00px] md:text-5xl text-6xl text-center text-white-A700 tracking-[0.25px] w-[69%] sm:w-full"
+                className="capitalize leading-[89.00px] md:text-5xl text-6xl text-center text-white-A700 tracking-[0.25px] w-[55%] sm:w-full"
                 size="txtPoppinsBold60"
               >
-                Our Services Make Your Business Secure
+                Our Services Make Your Business Secure
               </Text>
               <Text
                 className="mt-[22px] text-[15px] text-center text-white-A700 tracking-[0.50px]"
@@ -65,7 +65,7 @@ const ServicesOnePage = () => {
                 className="md:flex-1 sm:flex-col flex-row gap-[55px] grid sm:grid-cols-1 grid-cols-2 w-[48%] md:w-full"
                 orientation="horizontal"
               >
-                <div className="bg-orange-400 flex flex-col gap-[5px] items-start justify-center sm:ml-[0] p-[27px] sm:px-5 rounded-sm w-full">
+                <div className="cursor-pointer hover:bg-orange-400 bg-white-A700 flex flex-col gap-[5px] items-start justify-center sm:ml-[0] p-[27px] sm:px-5 rounded-sm w-full">
                   <Text
                     className="mt-[141px] text-2xl md:text-[22px] text-black-900 sm:text-xl tracking-[0.25px]"
                     size="txtOpenSansRomanBold24"
@@ -79,7 +79,7 @@ const ServicesOnePage = () => {
                     Our counter-drone technology stands vigilant.
                   </Text>
                 </div>
-                <div className="bg-white-A700 border border-gray-500_1e border-solid flex flex-col items-center justify-center sm:ml-[0] p-[27px] sm:px-5 rounded-sm w-full">
+                <div className="cursor-pointer hover:bg-orange-400 bg-white-A700 border border-gray-500_1e border-solid flex flex-col items-center justify-center sm:ml-[0] p-[27px] sm:px-5 rounded-sm w-full">
                   <Text
                     className="mt-[143px] text-2xl md:text-[22px] text-black-900 sm:text-xl tracking-[0.25px]"
                     size="txtOpenSansRomanBold24"
@@ -94,10 +94,10 @@ const ServicesOnePage = () => {
                   </Text>
                 </div>
               </List>
-              <div className="bg-white-A700 border border-gray-500_1e border-solid flex md:flex-1 flex-col items-start justify-end p-[27px] sm:px-5 rounded-sm w-[22%] md:w-full">
+              <div className="bg-white-A700 cursor-pointer hover:bg-orange-400 border border-gray-500_1e border-solid flex md:flex-1 flex-col items-start justify-end p-[27px] sm:px-5 rounded-sm w-[22%] md:w-full">
                 <Img
                   className="h-[51px] mt-[35px]"
-                  src="images/img_guard.svg"
+                  src="images/img_guard_black_900.svg"
                   alt="guard"
                 />
                 <Text
@@ -113,7 +113,7 @@ const ServicesOnePage = () => {
                   Guarding the Now, Securing the Future.
                 </Text>
               </div>
-              <div className="bg-white-A700 border border-gray-500_1e border-solid flex md:flex-1 flex-col gap-14 justify-end p-[27px] sm:px-5 rounded-sm w-[22%] md:w-full">
+              <div className="bg-white-A700 cursor-pointer hover:bg-orange-400 border border-gray-500_1e border-solid flex md:flex-1 flex-col gap-14 justify-end p-[27px] sm:px-5 rounded-sm w-[22%] md:w-full">
                 <Img
                   className="h-14 ml-1.5 md:ml-[0] mr-[153px] mt-[31px] w-14"
                   src="images/img_thumbsup.svg"
@@ -160,7 +160,7 @@ const ServicesOnePage = () => {
                 </Text>
               </div>
               <div className="flex sm:flex-col flex-row font-opensans sm:gap-[55px] items-center justify-between w-full">
-                <div className="bg-orange-400 flex sm:flex-1 flex-col items-start justify-end p-6 sm:px-5 rounded-sm w-[46%] sm:w-full">
+                <div className="bg-white-A700 cursor-pointer hover:bg-orange-400 flex sm:flex-1 flex-col items-start justify-end p-6 sm:px-5 rounded-sm w-[46%] sm:w-full">
                   <Img
                     className="h-[60px] mt-[34px] w-[60px]"
                     src="images/img_cleaningcart.svg"
@@ -179,7 +179,7 @@ const ServicesOnePage = () => {
                     <>Beyond Clean: It&#39;s Housekeeping Brilliance.</>
                   </Text>
                 </div>
-                <div className="bg-white-A700 border border-gray-500_1e border-solid flex sm:flex-1 flex-col items-start justify-end p-[27px] sm:px-5 rounded-sm w-[46%] sm:w-full">
+                <div className="bg-white-A700 cursor-pointer hover:bg-orange-400 border border-gray-500_1e border-solid flex sm:flex-1 flex-col items-start justify-end p-[27px] sm:px-5 rounded-sm w-[46%] sm:w-full">
                   <Img
                     className="h-[50px] mt-[43px] w-[50px]"
                     src="images/img_propertyagent.svg"
@@ -207,7 +207,7 @@ const ServicesOnePage = () => {
             />
           </div>
         </div>
-        <div className="font-poppins h-[748px] md:h-[857px] mt-[109px] md:px-5 relative w-full">
+        {/* <div className="font-poppins h-[748px] md:h-[857px] mt-[109px] md:px-5 relative w-full">
           <Img
             className="h-[748px] m-auto object-cover w-full"
             src="images/img_rectangle22077.png"
@@ -236,47 +236,46 @@ const ServicesOnePage = () => {
                 </Text>
                 <div className="font-lato sm:gap-5 gap-[26px] grid sm:grid-cols-1 grid-cols-2 justify-center min-h-[auto] mt-[37px] w-full">
                   <div className="flex flex-1 flex-col items-center justify-start w-full">
-                    <Text
-                      className="border-b border-gray-600 border-solid sm:pr-5 pr-[35px] py-[13px] text-[15px] text-gray-600_a0 tracking-[1.20px]"
-                      size="txtLatoRegular15Gray600a0"
-                    >
-                      Full name
-                    </Text>
+                  <input
+  type="text"
+  className="border-b border-gray-600 border-solid py-2 text-base  tracking-[1.20px] outline-none "
+  placeholder="Full name"
+/>
+
+
                   </div>
                   <div className="flex flex-1 flex-col items-center justify-start w-full">
-                    <Text
-                      className="border-b border-gray-600 border-solid sm:pr-5 pr-[35px] py-[13px] text-[15px] text-gray-600_a0 tracking-[1.20px]"
-                      size="txtLatoRegular15Gray600a0"
-                    >
-                      Company Name
-                    </Text>
+                  <input
+  type="text"
+  className="border-b border-gray-600 border-solid py-2 text-base  tracking-[1.20px] outline-none "
+  placeholder="Company name"
+/>
                   </div>
                   <div className="flex flex-1 flex-col items-center justify-start w-full">
-                    <Text
-                      className="border-b border-gray-600 border-solid sm:pr-5 pr-[35px] py-[13px] text-[15px] text-gray-600_a0 tracking-[1.20px]"
-                      size="txtLatoRegular15Gray600a0"
-                    >
-                      Email Id
-                    </Text>
+                  <input
+  type="email"
+  className="border-b border-gray-600 border-solid py-2 text-base  tracking-[1.20px] outline-none "
+  placeholder="Email Id"
+/>
                   </div>
                   <div className="flex flex-1 flex-col items-center justify-start w-full">
-                    <Text
-                      className="border-b border-gray-600 border-solid sm:pr-5 pr-[35px] py-[13px] text-[15px] text-gray-600_a0 tracking-[1.20px]"
-                      size="txtLatoRegular15Gray600a0"
-                    >
-                      Phone Number
-                    </Text>
+                  <input
+  type="tel"
+  className="border-b border-gray-600 border-solid py-2 text-base  tracking-[1.20px] outline-none "
+  placeholder="Phone Number"
+/>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="flex flex-col items-center justify-start mb-[3px] w-[32%] md:w-full">
-              <Button className="border border-orange-400 border-solid capitalize cursor-pointer font-medium h-11 leading-[normal] min-w-[155px] text-base text-center tracking-[0.16px]">
+            <div className="flex flex-col ml-3 items-center justify-start mb-[3px] w-[32%] md:w-full">
+              <Button className="border hover:bg-transparent  border-orange-400 border-solid capitalize cursor-pointer font-medium h-11 leading-[normal] min-w-[155px] text-base text-center tracking-[0.16px]">
                 get in touch
               </Button>
             </div>
           </div>
-        </div>
+        </div> */}
+        <Banner/>
         <Footer className="flex items-center justify-center mt-10 md:px-5 w-full" />
       </div>
     </>
