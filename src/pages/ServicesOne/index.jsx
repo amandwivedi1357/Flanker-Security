@@ -3,8 +3,10 @@ import React from "react";
 import { Banner, Button, Img, List, Text } from "components";
 import Footer from "components/Footer";
 import Header from "components/Header";
+import { useNavigate } from "react-router-dom";
 
 const ServicesOnePage = () => {
+  const navigate = useNavigate()
   return (
     <>
       <div className="bg-white-A700 flex flex-col font-poppins items-center justify-start mx-auto w-full">
@@ -65,36 +67,46 @@ const ServicesOnePage = () => {
                 className="md:flex-1 sm:flex-col flex-row gap-[55px] grid sm:grid-cols-1 grid-cols-2 w-[48%] md:w-full"
                 orientation="horizontal"
               >
-                <div className="cursor-pointer hover:bg-orange-400 bg-white-A700 flex flex-col gap-[5px] items-start justify-center sm:ml-[0] p-[27px] sm:px-5 rounded-sm w-full">
+                <div onClick={()=>navigate('/servicesone')} className="cursor-pointer hover:bg-orange-400 bg-white-A700 flex flex-col gap-[5px] items-start justify-center sm:ml-[0] p-[27px] sm:px-5 rounded-sm w-full">
+                <Img
+                  className="h-[51px] mt-[35px]"
+                  src="images/img_guard_black_900.svg"
+                  alt="guard"
+                />
                   <Text
-                    className="mt-[141px] text-2xl md:text-[22px] text-black-900 sm:text-xl tracking-[0.25px]"
-                    size="txtOpenSansRomanBold24"
-                  >
-                    Drones
-                  </Text>
-                  <Text
-                    className="leading-[24.00px] mb-[23px] text-black-900_b2 text-sm tracking-[0.25px] w-[90%] sm:w-full"
-                    size="txtOpenSansRomanSemiBold14"
-                  >
-                    Our counter-drone technology stands vigilant.
-                  </Text>
+                  className="mt-[57px] text-2xl md:text-[22px] text-black-900 sm:text-xl tracking-[0.25px]"
+                  size="txtOpenSansRomanBold24"
+                >
+                  Drones
+                </Text>
+                <Text
+                  className="leading-[24.00px] mb-[23px] mt-[3px] text-black-900_b2 text-sm tracking-[0.25px] w-full"
+                  size="txtOpenSansRomanSemiBold14"
+                >
+                  Our counter-drone technology stands vigilant.
+                </Text>
                 </div>
-                <div className="cursor-pointer hover:bg-orange-400 bg-white-A700 border border-gray-500_1e border-solid flex flex-col items-center justify-center sm:ml-[0] p-[27px] sm:px-5 rounded-sm w-full">
+                <div onClick={()=>navigate('/training')} className="cursor-pointer hover:bg-orange-400 bg-white-A700 flex flex-col gap-[5px] items-start justify-center sm:ml-[0] p-[27px] sm:px-5 rounded-sm w-full">
+                <Img
+                  className="h-[51px] mt-[35px]"
+                  src="images/img_guard_black_900.svg"
+                  alt="guard"
+                />
                   <Text
-                    className="mt-[143px] text-2xl md:text-[22px] text-black-900 sm:text-xl tracking-[0.25px]"
-                    size="txtOpenSansRomanBold24"
-                  >
-                    Security Training
-                  </Text>
-                  <Text
-                    className="leading-[24.00px] mb-[23px] mt-[3px] text-black-900_b2 text-sm tracking-[0.25px] w-full"
-                    size="txtOpenSansRomanSemiBold14"
-                  >
-                    Training the first line of defense.
-                  </Text>
+                  className="mt-[57px] text-2xl md:text-[22px] text-black-900 sm:text-xl tracking-[0.25px]"
+                  size="txtOpenSansRomanBold24"
+                >
+                  Security Training
+                </Text>
+                <Text
+                  className="leading-[24.00px] mb-[23px] mt-[3px] text-black-900_b2 text-sm tracking-[0.25px] w-full"
+                  size="txtOpenSansRomanSemiBold14"
+                >
+                  Training the first line of defense.
+                </Text>
                 </div>
               </List>
-              <div className="bg-white-A700 cursor-pointer hover:bg-orange-400 border border-gray-500_1e border-solid flex md:flex-1 flex-col items-start justify-end p-[27px] sm:px-5 rounded-sm w-[22%] md:w-full">
+              <div  onClick={()=>navigate('/guards')} className="bg-white-A700 cursor-pointer hover:bg-orange-400 border border-gray-500_1e border-solid flex md:flex-1 flex-col items-start justify-end p-[27px] sm:px-5 rounded-sm w-[22%] md:w-full">
                 <Img
                   className="h-[51px] mt-[35px]"
                   src="images/img_guard_black_900.svg"
@@ -113,10 +125,10 @@ const ServicesOnePage = () => {
                   Guarding the Now, Securing the Future.
                 </Text>
               </div>
-              <div className="bg-white-A700 cursor-pointer hover:bg-orange-400 border border-gray-500_1e border-solid flex md:flex-1 flex-col gap-14 justify-end p-[27px] sm:px-5 rounded-sm w-[22%] md:w-full">
+              <div onClick={()=>navigate('/infrastructure')} className="bg-white-A700 cursor-pointer hover:bg-orange-400 border border-gray-500_1e border-solid flex md:flex-1 flex-col gap-14 justify-end p-[27px] sm:px-5 rounded-sm w-[22%] md:w-full">
                 <Img
                   className="h-14 ml-1.5 md:ml-[0] mr-[153px] mt-[31px] w-14"
-                  src="images/img_thumbsup.svg"
+                  src="images/img_guard_black_900.svg"
                   alt="thumbsup"
                 />
                 <div className="flex flex-col items-start justify-start mb-[23px]">

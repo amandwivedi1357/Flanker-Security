@@ -1,11 +1,13 @@
 import React from "react";
 
-import { Banner, Button, CheckBox, Img, Text } from "components";
+import { Banner, Button, CheckBox, Img, Text,Slider } from "components";
 import Footer from "components/Footer";
 import Header from "components/Header";
 import { FaCheck } from "react-icons/fa6";
 
 const AboutusPage = () => {
+  const [sliderState, setsliderState] = React.useState(0);
+  const sliderRef = React.useRef(null);
   return (
     <>
       <div className="bg-white-A700 flex flex-col items-center justify-start mx-auto w-full">
@@ -82,7 +84,7 @@ const AboutusPage = () => {
               />
             </div>
           </div>
-          <div
+          {/* <div
             className="bg-cover bg-no-repeat font-redhatdisplay h-[514px] mt-28 md:px-5 py-[5px] relative w-full"
             style={{ backgroundImage: "url('images/img_group50507.png')" }}
           >
@@ -134,7 +136,94 @@ const AboutusPage = () => {
                 alt="pngwingThree"
               />
             </div>
+          </div> */}
+          <Slider
+            autoPlay
+            autoPlayInterval={2000}
+            activeIndex={sliderState}
+            responsive={{
+              0: { items: 1 },
+              550: { items: 2 },
+              1050: { items: 3 },
+            }}
+            onSlideChanged={(e) => {
+              setsliderState(e?.item);
+            }}
+            ref={sliderRef}
+            className="flex gap-[74px]  mt-[111px] mx-auto md:px-5 w-full"
+            items={[...Array(1)].map(() => (
+              <React.Fragment key={Math.random()}>
+                <div 
+            className="bg-cover  bg-no-repeat font-redhatdisplay h-[514px] mt-28 md:px-5 py-[5px] relative w-full"
+            style={{ backgroundImage: "url('images/img_group50507.png')" }}
+          >
+            <div className="flex flex-col items-center justify-start mb-[-15px] mt-[97px] mx-auto w-[59%] z-[1]">
+              <div className="flex flex-col gap-[19px] items-center justify-start w-full">
+                <Text
+                  className="text-black-900_e5 text-center text-sm tracking-[2.00px] uppercase"
+                  size="txtRedHatDisplayRomanMedium14Black900e5"
+                >
+                  vision
+                </Text>
+                <Text
+                  className="leading-[50.00px] md:text-3xl sm:text-[28px] text-[32px] text-center text-gray-900 tracking-[1.00px] w-full"
+                  size="txtRedHatDisplayRomanRegular32"
+                >
+                  <span className="text-gray-900 font-redhatdisplay font-normal">
+                    To usher in a paradigm shift in{" "}
+                  </span>
+                  <span className="text-gray-900 font-redhatdisplay font-bold">
+                    security services
+                  </span>
+                  <span className="text-gray-900 font-redhatdisplay font-normal">
+                    {" "}
+                    &{" "}
+                  </span>
+                  <span className="text-gray-900 font-redhatdisplay font-bold">
+                    Property Management{" "}
+                  </span>
+                  <span className="text-gray-900 font-redhatdisplay font-normal">
+                    through innovation & Automation
+                  </span>
+                </Text>
+              </div>
+            </div>
+            <div className="flex sm:flex-col flex-row sm:gap-5 items-end justify-evenly mt-auto mx-auto w-full">
+              <Img
+                className="sm:flex-1 h-[233px] md:h-auto object-cover w-[34%] sm:w-full"
+                src="images/img_pngwing1.png"
+                alt="pngwingOne"
+              />
+              <Img
+                className="sm:flex-1 h-[193px] md:h-auto sm:mt-0 mt-10 object-cover w-[34%] sm:w-full"
+                src="images/img_pngwing2.png"
+                alt="pngwingTwo"
+              />
+              <Img
+                className="sm:flex-1 h-[193px] md:h-auto sm:mt-0 mt-10 object-cover w-[33%] sm:w-full"
+                src="images/img_pngwing3.png"
+                alt="pngwingThree"
+              />
+            </div>
           </div>
+          
+              </React.Fragment>
+            ))}
+            renderDotsItem={({ isActive }) => {
+              if (isActive) {
+                return (
+                  <div className="inline-block cursor-pointer rounded-[50%] h-2.5 bg-orange-400 w-2.5" />
+                );
+              }
+              return (
+                <div
+                  className="inline-block cursor-pointer rounded-[50%] h-2.5 bg-blue_gray-100 w-2.5"
+                  role="button"
+                  tabIndex={0}
+                />
+              );
+            }}
+          />
           <Img
             className="h-2.5 mt-[23px]"
             src="images/img_contrast.svg"

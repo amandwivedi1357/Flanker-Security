@@ -16,6 +16,7 @@ import guard from "../../assets/SVG/Guard.svg"
 import { FaCheck } from "react-icons/fa6";
 import Footer from "components/Footer";
 import { useNavigate } from "react-router-dom";
+import Header from "components/Header";
 
 const HomepagePage = () => {
   const sliderRef = React.useRef(null);
@@ -115,7 +116,7 @@ const HomepagePage = () => {
                         </p>
                       </li>
                     </ul>
-                    <Line className="bg-orange-400 h-[3px] mt-[3px] rounded-[1px] w-[19%]" />
+                    {/* <Line className="bg-green-400 h-[3px] mt-[3px] rounded-[1px] w-[19%]" /> */}
                   </div>
                   <div className="bg-white-A700 flex flex-col font-heebo items-start justify-end mb-2 md:ml-[0] ml-[247px] md:mt-0 mt-[15px] p-[5px] rounded-[21px] w-[14%] md:w-full">
                     <div className="flex flex-row gap-3 items-start justify-start w-[90%] md:w-full">
@@ -137,6 +138,7 @@ const HomepagePage = () => {
                 </div>
               </div>
             </header>
+            {/* <Header/> */}
           </div>
           <div className="flex md:flex-col flex-row md:gap-10 items-start justify-between max-w-[1164px] mt-[95px] mx-auto md:px-5 w-full">
             <Img
@@ -173,18 +175,11 @@ const HomepagePage = () => {
               </Text>
               <div className="flex flex-row font-poppins gap-[13px] items-center justify-start mt-[23px] w-[56%] md:w-full">
                 <div className="flex flex-col items-center justify-start w-[48%]">
-                  <Button className="!text-black-900 border border-orange-400 border-solid capitalize cursor-pointer font-medium h-11 leading-[normal] min-w-[142px] text-base text-center tracking-[0.16px]">
+                  <Button className="!text-black-900 hover:bg-transparent hover:outline-orange-400 border border-orange-400 border-solid capitalize cursor-pointer font-medium h-11 leading-[normal] min-w-[142px] text-base text-center tracking-[0.16px]">
                     Know More
                   </Button>
                 </div>
-                <div className="flex flex-col items-center justify-start w-[48%]">
-                  <Button
-                    className="capitalize cursor-pointer font-medium h-11 leading-[normal] min-w-[142px] text-base text-center tracking-[0.16px]"
-                    variant="outline"
-                  >
-                    Know More
-                  </Button>
-                </div>
+               
               </div>
             </div>
           </div>
@@ -383,7 +378,7 @@ const HomepagePage = () => {
               The Property Management Vertical encompasses the full spectrum of
               House Keeping Services, Landscaping, Maintenance Support Team and
               Support Staff with highly professional teams led by Facility
-              Mangers.  
+              Mangers. 
             </Text>
             <div
               className="absolute bg-cover bg-no-repeat bottom-[0] flex flex-col font-inter h-[248px] items-center justify-start p-[54px] md:px-10 sm:px-5 right-[0] w-[53%]"
