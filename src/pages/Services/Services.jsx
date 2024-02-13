@@ -68,12 +68,13 @@ const ServicesPage = () => {
                 size="txtLatoRegular15Black900cc"
               >
                 <>
-                  Surveillance and Security:
+                 <span className="text-black-900_01 font-lato text-left text-base font-bold"> Surveillance and Security:</span>
                   <br />
                   Drones provide a bird&#39;s-eye view, enhancing surveillance
                   capabilities for law enforcement, border control, and private
                   security firms.
                   <br />
+                  
                   Monitoring large events, critical infrastructure, and
                   expansive areas becomes more efficient and cost-effective.
                 </>
@@ -88,7 +89,67 @@ const ServicesPage = () => {
                     <br />
                   </>
                 </span>
-                <span className="text-black-900_01 font-lato text-left text-[15px] font-normal">
+                <span className="leading-[29.00px] mt-[18px] text-[15px] text-black-900_cc tracking-[0.50px]">
+                  <>
+                    Drones equipped with advanced mapping technologies
+                    contribute to accurate and rapid surveying of terrains,
+                    construction sites, and geographical features.
+                    <br />
+                    This aids in disaster response, and infrastructure
+                    development.
+                  </>
+                </span>
+              </Text>
+              <Text
+                className="leading-[29.00px] mt-[39px] text-black-900_01 text-xl tracking-[0.50px]"
+                size="txtLatoMedium20"
+              >
+                <span className="text-black-900_01 font-lato text-left text-base font-bold">
+                  <>
+                  Agriculture:
+                    <br />
+                  </>
+                </span>
+                <span className="leading-[23.00px] mt-[18px] text-[15px] text-black-900_cc tracking-[0.50px]">
+                  <>
+                  Precision agriculture employs drones for crop monitoring, assessing field health, and optimising resource utilization.
+                    <br />
+                    Drones equipped with sensors can gather valuable data on soil conditions and crop health.
+                  </>
+                </span>
+              </Text>
+              <Text
+                className="leading-[29.00px] mt-[39px] text-black-900_01 text-xl tracking-[0.50px]"
+                size="txtLatoMedium20"
+              >
+                <span className="text-black-900_01 font-lato text-left text-base font-bold">
+                  <>
+                    Mapping and Surveying:
+                    <br />
+                  </>
+                </span>
+                <span className="leading-[29.00px] mt-[18px] text-[15px] text-black-900_cc tracking-[0.50px]">
+                  <>
+                    Drones equipped with advanced mapping technologies
+                    contribute to accurate and rapid surveying of terrains,
+                    construction sites, and geographical features.
+                    <br />
+                    This aids in disaster response, and infrastructure
+                    development.
+                  </>
+                </span>
+              </Text>
+              <Text
+                className="leading-[29.00px] mt-[39px] text-black-900_01 text-xl tracking-[0.50px]"
+                size="txtLatoMedium20"
+              >
+                <span className="text-black-900_01 font-lato text-left text-base font-bold">
+                  <>
+                    Mapping and Surveying:
+                    <br />
+                  </>
+                </span>
+                <span className="leading-[29.00px] mt-[18px] text-[15px] text-black-900_cc tracking-[0.50px]">
                   <>
                     Drones equipped with advanced mapping technologies
                     contribute to accurate and rapid surveying of terrains,
@@ -187,7 +248,7 @@ const ServicesPage = () => {
                       className="text-base text-black-900_b2 tracking-[0.25px]"
                       size="txtOpenSansRomanRegular16"
                     >
-                      +844 45 67892
+                      +84445 67892
                     </Text>
                   </div>
                   <div className="flex flex-row font-opensans gap-[17px] items-start justify-start ml-1.5 md:ml-[0] mt-[33px] w-[87%] md:w-full">

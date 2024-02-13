@@ -1,8 +1,9 @@
 import React from "react";
 
-import { Button, CheckBox, Img, Text } from "components";
+import { Banner, Button, CheckBox, Img, Text } from "components";
 import Footer from "components/Footer";
 import Header from "components/Header";
+import { FaCheck } from "react-icons/fa6";
 
 const AboutusOnePage = () => {
   return (
@@ -18,7 +19,7 @@ const AboutusOnePage = () => {
               />
               <div className="absolute bottom-[30%] flex flex-col gap-[22px] inset-x-[0] items-center justify-start mx-auto">
                 <Text
-                  className="capitalize leading-[89.00px] md:text-5xl text-6xl text-center text-white-A700 tracking-[0.25px] w-full"
+                  className="capitalize leading-[89.00px] md:text-5xl text-6xl text-center text-white-A700 tracking-[0.25px] w-[60%]"
                   size="txtPoppinsBold60"
                 >
                   Your Partner in Uncompromised Security.
@@ -39,7 +40,7 @@ const AboutusOnePage = () => {
               src="images/img_rectangle22076_1.png"
               alt="rectangle22076"
             />
-            <div className="flex flex-col items-start justify-start md:mt-0 mt-[125px]">
+            <div  className="ml-[125px] flex flex-col items-start justify-start md:mt-0 mt-[125px]">
               <Text
                 className="text-gray-600 text-sm tracking-[2.00px] uppercase"
                 size="txtRedHatDisplayRomanMedium14"
@@ -193,52 +194,41 @@ const AboutusOnePage = () => {
             >
               <div className="flex flex-col gap-[34px] items-start justify-start w-[94%] md:w-full">
                 <div className="flex sm:flex-col flex-row sm:gap-10 items-center justify-between w-full">
-                  <CheckBox
-                    className="font-semibold text-base text-black-900 text-left tracking-[0.25px]"
-                    inputClassName="mr-[5px]"
-                    name="perfectionanyti_One"
-                    id="perfectionanyti_One"
-                    label="Perfection Anytime"
-                  ></CheckBox>
-                  <CheckBox
-                    className="font-semibold text-base text-black-900 text-left tracking-[0.25px]"
-                    inputClassName="mr-[5px]"
-                    name="trainedprofessi_One"
-                    id="trainedprofessi_One"
-                    label="Trained Professionals"
-                  ></CheckBox>
+                  <span className="flex gap-3">
+                  <FaCheck 
+                    className=" mt-1 font-semibold text-base text-black-900 text-left tracking-[0.25px]"
+                  /> <span className="font-semibold  text-base text-black-900 text-left tracking-[0.25px]">Perfection Anytime</span>
+                  </span>
+                  
+                  <span className="flex gap-3 mr-4">
+                  <FaCheck 
+                    className=" mt-1 font-semibold text-base text-black-900 text-left tracking-[0.25px]"
+                  /> <span className="font-semibold  text-base text-black-900 text-left tracking-[0.25px]">Trained Professionals</span>
+                  </span>
                 </div>
-                <div className="flex sm:flex-col flex-row sm:gap-10 gap-[97px] items-center justify-start w-[92%] md:w-full">
-                  <CheckBox
-                    className="font-semibold text-base text-black-900 text-left tracking-[0.25px]"
-                    inputClassName="mr-[5px]"
-                    name="advancetechnolo_One"
-                    id="advancetechnolo_One"
-                    label="Advance Technology"
-                  ></CheckBox>
-                  <CheckBox
-                    className="font-semibold text-base text-black-900 text-left tracking-[0.25px]"
-                    inputClassName="mr-[5px]"
-                    name="emergencyhelp"
-                    id="emergencyhelp"
-                    label="Emergency help"
-                  ></CheckBox>
+                <div className="flex sm:flex-col flex-row sm:gap-10 gap-[97px] items-center justify-start w-[96%] md:w-full">
+                <span className="flex gap-3">
+                  <FaCheck 
+                    className=" mt-1 font-semibold text-base text-black-900 text-left tracking-[0.25px]"
+                  /> <span className="font-semibold  text-base text-black-900 text-left tracking-[0.25px]">Perfection Anytime</span>
+                  </span>
+                  <span className="flex gap-3 ml-6">
+                  <FaCheck 
+                    className=" mt-1 font-semibold text-base text-black-900 text-left tracking-[0.25px]"
+                  /> <span className="font-semibold  text-base text-black-900 text-left tracking-[0.25px]">Perfection Anytime</span>
+                  </span>
                 </div>
                 <div className="flex flex-row items-center justify-between w-[94%] md:w-full">
-                  <CheckBox
-                    className="font-semibold text-base text-black-900 text-left tracking-[0.25px]"
-                    inputClassName="mr-[5px]"
-                    name="perfectionanyti_Three"
-                    id="perfectionanyti_Three"
-                    label="Perfection Anytime"
-                  ></CheckBox>
-                  <CheckBox
-                    className="font-semibold text-base text-black-900 text-left tracking-[0.25px]"
-                    inputClassName="mr-[5px]"
-                    name="remoteguarding"
-                    id="remoteguarding"
-                    label="Remote Guarding"
-                  ></CheckBox>
+                <span className="flex gap-3">
+                  <FaCheck 
+                    className=" mt-1 font-semibold text-base text-black-900 text-left tracking-[0.25px]"
+                  /> <span className="font-semibold  text-base text-black-900 text-left tracking-[0.25px]">Perfection Anytime</span>
+                  </span>
+                  <span className="flex gap-3">
+                  <FaCheck 
+                    className=" mt-1 font-semibold text-base text-black-900 text-left tracking-[0.25px]"
+                  /> <span className="font-semibold  text-base text-black-900 text-left tracking-[0.25px]">Perfection Anytime</span>
+                  </span>
                 </div>
               </div>
             </div>
@@ -252,7 +242,7 @@ const AboutusOnePage = () => {
               Mangers.  
             </Text>
           </div>
-          <div className="font-poppins h-[748px] md:h-[971px] mt-[223px] md:px-5 relative w-full">
+          {/* <div className="font-poppins h-[748px] md:h-[971px] mt-[223px] md:px-5 relative w-full">
             <Img
               className="h-[748px] m-auto object-cover w-full"
               src="images/img_rectangle22077.png"
@@ -321,7 +311,8 @@ const AboutusOnePage = () => {
                 </Button>
               </div>
             </div>
-          </div>
+          </div> */}
+          <Banner/>
           <Footer className="flex items-center justify-center mt-10 md:px-5 w-full" />
         </div>
       </div>
