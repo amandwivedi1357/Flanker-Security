@@ -6,7 +6,7 @@ import Header from "components/Header";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Training = () => {
+const Investigation = () => {
   const [toast, setToast] = useState(null);
   const [formData, setFormData] = useState({
     name: "",
@@ -93,14 +93,14 @@ const Training = () => {
             <div className="flex md:flex-1 flex-col items-start justify-start md:mt-0 mt-[13px] w-[67%] md:w-full">
               <Img
                 className="h-[488px] sm:h-auto object-cover w-full"
-                src="images/training.jpg"
+                src="images/img_rectangle22116.png"
                 alt="rectangle22116"
               />
               <Text
                 className="mt-[37px] md:text-3xl sm:text-[28px] text-[32px] text-black-900 tracking-[0.25px]"
                 size="txtOpenSansRomanBold32"
               >
-                Training{" "}
+                Investigation{" "}
               </Text>
               <Text
                 className="leading-[29.00px] mt-4 text-[15px] text-black-900_cc tracking-[0.50px] w-full"
@@ -281,4 +281,4 @@ const Training = () => {
   );
 };
 
-export default Training;
+export default Investigation;
