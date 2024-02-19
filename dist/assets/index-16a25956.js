@@ -1,0 +1,1 @@
+import{r as s,j as c}from"./index-e690ad57.js";import"./index-1116b432.js";const l=({message:e,type:r,onClose:t})=>{const[i,a]=s.useState(!0);return s.useEffect(()=>{const o=setTimeout(()=>{a(!1),t()},3e3);return()=>clearTimeout(o)},[t]),c("div",{className:`toast ${i?"show":""} ${r}`,children:e})};export{l as T};
