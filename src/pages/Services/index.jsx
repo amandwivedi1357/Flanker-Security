@@ -112,7 +112,7 @@ const ServicesPage = () => {
                     </Text>
                     <div className="flex flex-col font-lato items-center justify-start mt-7 w-full">
                       <Text
-                        className="border-b border-gray-600 border-solid sm:pr-5 pr-[35px] py-[13px] text-[15px] text-gray-600_a0 tracking-[1.20px]"
+                        className="border-b border-gray-600 border-solid sm:pr-5 pr-[35px] py-[13px] text-[15px] text-gray-600_a0 tracking-[1.20px] w-[70%]"
                         size="txtLatoRegular15Gray600a0"
                       >
                         <span className="text-gray-600_a0 font-lato text-left font-normal">
@@ -125,7 +125,7 @@ const ServicesPage = () => {
                     </div>
                     <div className="flex flex-col font-lato items-center justify-start mt-[23px] w-full">
                       <Text
-                        className="border-b border-gray-600 border-solid sm:pr-5 pr-[35px] py-[13px] text-[15px] text-gray-600_a0 tracking-[1.20px]"
+                        className="border-b border-gray-600 border-solid sm:pr-5 pr-[35px] py-[13px] text-[15px] text-gray-600_a0 tracking-[1.20px] w-[70%]"
                         size="txtLatoRegular15Gray600a0"
                       >
                         <span className="text-gray-600_a0 font-lato text-left font-normal">
@@ -138,7 +138,7 @@ const ServicesPage = () => {
                     </div>
                     <div className="flex flex-col font-lato items-center justify-start mt-[23px] w-full">
                       <Text
-                        className="border-b border-gray-600 border-solid sm:pr-5 pr-[35px] py-[13px] text-[15px] text-gray-600_a0 tracking-[1.20px]"
+                        className="border-b border-gray-600 border-solid sm:pr-5 pr-[35px] py-[13px] text-[15px] text-gray-600_a0 tracking-[1.20px] w-[70%]"
                         size="txtLatoRegular15Gray600a0"
                       >
                         Company Name
@@ -146,7 +146,7 @@ const ServicesPage = () => {
                     </div>
                     <div className="flex flex-col font-lato items-center justify-start mt-[23px] w-full">
                       <Text
-                        className="border-b border-gray-600 border-solid sm:pr-5 pr-[35px] py-[13px] text-[15px] text-gray-600_a0 tracking-[1.20px]"
+                        className="border-b border-gray-600 border-solid sm:pr-5 pr-[35px] py-[13px] text-[15px] text-gray-600_a0 tracking-[1.20px] w-[70%]"
                         size="txtLatoRegular15Gray600a0"
                       >
                         Phone Number

@@ -83,7 +83,7 @@ const ContactformPage = () => {
                       <div className="font-lato sm:gap-5 gap-[39px] grid sm:grid-cols-1 grid-cols-2 justify-center min-h-[auto] mt-[37px] w-full">
                         <div className="flex flex-1 flex-col items-center justify-start w-full">
                           <Text
-                            className="border-b border-gray-600 border-solid sm:pr-5 pr-[35px] py-[13px] text-[15px] text-gray-600_a0 tracking-[1.20px]"
+                            className="border-b border-gray-600 border-solid sm:pr-5 pr-[35px] py-[13px] text-[15px] text-gray-600_a0 tracking-[1.20px] w-full"
                             size="txtLatoRegular15Gray600a0"
                           >
                             Full name
@@ -91,7 +91,7 @@ const ContactformPage = () => {
                         </div>
                         <div className="flex flex-1 flex-col items-center justify-start w-full">
                           <Text
-                            className="border-b border-gray-600 border-solid sm:pr-5 pr-[35px] py-[13px] text-[15px] text-gray-600_a0 tracking-[1.20px]"
+                            className="border-b border-gray-600 border-solid sm:pr-5 pr-[35px] py-[13px] text-[15px] text-gray-600_a0 tracking-[1.20px] w-full"
                             size="txtLatoRegular15Gray600a0"
                           >
                             Company Name
@@ -99,7 +99,7 @@ const ContactformPage = () => {
                         </div>
                         <div className="flex flex-1 flex-col items-center justify-start w-full">
                           <Text
-                            className="border-b border-gray-600 border-solid sm:pr-5 pr-[35px] py-[13px] text-[15px] text-gray-600_a0 tracking-[1.20px]"
+                            className="border-b border-gray-600 border-solid sm:pr-5 pr-[35px] py-[13px] text-[15px] text-gray-600_a0 tracking-[1.20px] w-full"
                             size="txtLatoRegular15Gray600a0"
                           >
                             Email Id
@@ -107,7 +107,7 @@ const ContactformPage = () => {
                         </div>
                         <div className="flex flex-1 flex-col items-center justify-start w-full">
                           <Text
-                            className="border-b border-gray-600 border-solid sm:pr-5 pr-[35px] py-[13px] text-[15px] text-gray-600_a0 tracking-[1.20px]"
+                            className="border-b border-gray-600 border-solid sm:pr-5 pr-[35px] py-[13px] text-[15px] text-gray-600_a0 tracking-[1.20px] w-full"
                             size="txtLatoRegular15Gray600a0"
                           >
                             Phone Number

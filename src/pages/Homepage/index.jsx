@@ -21,37 +21,37 @@ const HomepagePage = () => {
       <div className="bg-white-A700 flex flex-col items-center justify-start mx-auto w-full">
         <div className="flex flex-col items-center justify-start w-full">
           <div className="font-poppins h-[875px] md:px-5 relative w-full">
-            <div className="h-[875px] m-auto w-full">
+            <div className="sm:bg-colors h-[875px] m-auto w-full">
               <Img
-                className="h-[875px] m-auto object-cover w-full"
+                className="h-[875px] sm:hidden m-auto object-cover w-full"
                 src="images/img_rectangle21985_875x1440.png"
                 alt="rectangle21985"
               />
               <div className="absolute bottom-[22%] flex flex-col items-start justify-start left-[7%] ml-[-30px] w-[53%]">
                 <Text
-                  className="capitalize leading-[89.00px] md:text-5xl text-6xl text-white-A700 tracking-[0.25px] w-full"
+                  className="capitalize sm:font-medium leading-[89.00px] sm:m-[] sm:ml-[20%] sm:text-3xl md:text-5xl text-6xl text-white-A700 tracking-[0.25px] sm:w-[324px] w-full"
                   size="txtPoppinsBold60"
                 >
                   Your Comprehensive Security Provider
                 </Text>
                 <Text
-                  className="leading-[29.00px] mt-4 text-[15px] text-white-A700 tracking-[0.50px] w-[71%] sm:w-full"
+                  className="leading-[29.00px] sm:m-[] sm:ml-[20%] sm:mr-[0] mt-4 text-[15px] text-white-A700 tracking-[0.50px] sm:w-[298px] w-[71%]"
                   size="txtLatoRegular15"
                 >
                   We’re not just a security company, we’re the solution to all
                   your safety needs
                 </Text>
                 <div className="flex flex-row font-poppins gap-[21px] items-center justify-start mt-11 w-[41%] md:w-full">
-                  <div className="flex flex-col items-center justify-start w-[47%]">
+                  <div className="flex flex-col sm:hidden items-center justify-start w-[47%]">
                     <Button
-                      className="capitalize cursor-pointer font-medium h-11 leading-[normal] min-w-[143px] text-base text-center tracking-[0.16px]"
+                      className="capitalize cursor-pointer font-medium h-11 leading-[normal] sm:m-[] min-w-[143px] sm:ml-[0] text-base text-center tracking-[0.16px]"
                       variant="outline"
                     >
                       contact us
                     </Button>
                   </div>
                   <div className="flex flex-col items-center justify-start w-[47%]">
-                    <Button className="!text-black-900 border border-orange-400 border-solid capitalize cursor-pointer font-medium h-11 leading-[normal] min-w-[143px] text-base text-center tracking-[0.16px]">
+                    <Button className="!text-black-900 sm:bg-colors1 border border-orange-400 border-solid capitalize cursor-pointer font-medium h-11 leading-[normal] sm:m-[] min-w-[143px] sm:ml-[110%] text-base text-center tracking-[0.16px] sm:w-[100px]">
                       contact us
                     </Button>
                   </div>
@@ -67,17 +67,17 @@ const HomepagePage = () => {
               <div className="bg-white-A700_11 flex flex-1 flex-col items-center justify-start p-[30px] sm:px-5 shadow-bs1 w-full">
                 <div className="flex md:flex-col flex-row md:gap-5 items-center justify-start mb-2 w-[95%] md:w-full">
                   <Img
-                    className="h-[65px] sm:h-auto sm:m-[] sm:ml-[-75%] object-cover sm:w-[13%] w-[7%] md:w-full"
+                    className="h-[65px] sm:h-auto sm:m-[] sm:ml-[-85%] object-cover w-[7%] sm:w-[9%] md:w-full"
                     src="images/img_whatsappimage20231213.png"
                     alt="whatsappimageTwenty"
                   />
                   <Text
-                    className="bg-clip-text bg-gradient1  capitalize sm:ml-[-30px] md:ml-[0] ml-[9px] sm:mt-[-13.5%] text-transparent text-xl tracking-[0.25px]"
+                    className="bg-clip-text bg-gradient1  capitalize sm:ml-[-45%] md:ml-[0] ml-[9px] sm:mt-[-10.5%] text-transparent text-xl sm:text-xs tracking-[0.25px]"
                     size="txtPoppinsRegular20"
                   >
                     FLANKER SECURITY
                   </Text>
-                  <div className="flex flex-col items-start justify-start md:ml-[0] ml-[132px] w-[32%] md:w-full">
+                  <div className="flex flex-col sm:hidden items-start justify-start md:ml-[0] ml-[132px] w-[32%] md:w-full">
                     <ul className="flex flex-row gap-8 sm:hidden items-start justify-between w-full common-row-list">
                       <li>
                         <a
@@ -114,8 +114,8 @@ const HomepagePage = () => {
                     </ul>
                     <Line className="bg-orange-400 h-[3px] mt-[3px] rounded-[1px] w-[19%]" />
                   </div>
-                  <div className="bg-white-A700 flex flex-col font-heebo items-start justify-end mb-2 md:ml-[0] ml-[247px] md:mt-0 mt-[15px] p-[5px] rounded-[21px] w-[14%] md:w-full">
-                    <div className="flex flex-row gap-3 items-start justify-start w-[90%] md:w-full">
+                  <div className="bg-white-A700 flex flex-col font-heebo sm:hidden items-start justify-end mb-2 md:ml-[0] ml-[247px] md:mt-0 mt-[15px] p-[5px] rounded-[21px] w-[14%] md:w-full">
+                    <div className="flex flex-row gap-3 sm:hidden items-start justify-start w-[90%] md:w-full">
                       <div className="bg-gradient  flex flex-col h-[31px] items-center justify-start p-[9px] rounded-[15px] w-[31px]">
                         <Img
                           className="h-[11px] w-[11px]"
@@ -137,7 +137,7 @@ const HomepagePage = () => {
           </div>
           <div className="flex md:flex-col flex-row md:gap-10 items-start justify-between max-w-[1164px] mt-[95px] mx-auto md:px-5 w-full">
             <Img
-              className="h-[640px] md:h-auto object-cover"
+              className="sm:flex-1 h-[640px] md:h-auto sm:m-[] sm:mt-[-20%] object-cover sm:w-full"
               src="images/img_rectangle22076_640x502.png"
               alt="rectangle22076"
             />
