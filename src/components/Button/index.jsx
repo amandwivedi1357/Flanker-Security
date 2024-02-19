@@ -20,10 +20,12 @@ const Button = ({
   size = "xs",
   variant = "fill",
   color = "orange_400",
+  type = "button", // Default type is "button"
   ...restProps
 }) => {
   return (
     <button
+      type={type} // Include the type attribute
       className={`${className} ${(shape && shapes[shape]) || ""} ${(size && sizes[size]) || ""} ${(variant && variants[variant]?.[color]) || ""}`}
       {...restProps}
     >
@@ -41,6 +43,7 @@ Button.propTypes = {
   size: PropTypes.oneOf(["xs"]),
   variant: PropTypes.oneOf(["outline", "fill"]),
   color: PropTypes.oneOf(["orange_400"]),
+  type: PropTypes.oneOf(["button", "submit", "reset"]), // Add the type prop
 };
 
 export { Button };

@@ -1,15 +1,63 @@
-import React from "react";
-
+import React, { useState } from "react";
+import emailjs from '@emailjs/browser';
 import { Button, Img, Text } from "components";
 import Footer from "components/Footer";
 import Header from "components/Header";
 
 const ServicesPage = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    phoneNumber: "",
+    
+  });
+
+  const handleChange = (selectedValue, { name }) => {
+    console.log("Selected Value:", selectedValue); // Log the selected value
+    console.log("Name:", name); // Log the name of the field
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: selectedValue
+    }));
+  };
+  
+  
+  
+  
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    console.log(formData)
+    // Sending email using emailjs library
+    emailjs.send('service_syu7i3h', 'template_gurv3bi', {
+      user_name: formData.name,
+      user_email: formData.email,
+      company_name: formData.company,
+      phone_number: formData.phoneNumber,
+      
+      
+    }, "PAMSeoabaa0l3PiqP")
+      .then((result) => {
+        console.log(result.text);
+        // Clear form fields after successful submission
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          phoneNumber: "",
+        });
+        alert("Email sent successfully!");
+      }, (error) => {
+        console.log(error.text);
+        alert("Error sending email. Please try again later.");
+      });
+  };
   return (
     <>
-      <div className="bg-white-A700 flex flex-col font-poppins items-center justify-start mx-auto w-full">
-        <div className="md:h-[848px] h-[875px] md:px-5 relative w-full">
-          <div className="absolute h-[848px] inset-[0] justify-center m-auto w-full">
+      <div className="bg-white-A700 flex flex-col mb-[-20px] font-poppins items-center justify-start mx-auto w-full">
+        <div className="md:h-[848px] h-[875px] md:px-5 relative w-full ">
+          <div className="absolute h-[848px] inset-[0] justify-center  w-full">
             <Img
               className="h-[848px] m-auto object-cover w-full"
               src="images/img_rectangle21985_1.png"
@@ -106,64 +154,21 @@ const ServicesPage = () => {
               >
                 <span className="text-black-900_01 font-lato text-left text-base font-bold">
                   <>
-                  Agriculture:
-                    <br />
-                  </>
-                </span>
-                <span className="leading-[23.00px] mt-[18px] text-[15px] text-black-900_cc tracking-[0.50px]">
-                  <>
-                  Precision agriculture employs drones for crop monitoring, assessing field health, and optimising resource utilization.
-                    <br />
-                    Drones equipped with sensors can gather valuable data on soil conditions and crop health.
-                  </>
-                </span>
-              </Text>
-              <Text
-                className="leading-[29.00px] mt-[39px] text-black-900_01 text-xl tracking-[0.50px]"
-                size="txtLatoMedium20"
-              >
-                <span className="text-black-900_01 font-lato text-left text-base font-bold">
-                  <>
-                    Mapping and Surveying:
+                  Challenges and Concerns:
                     <br />
                   </>
                 </span>
                 <span className="leading-[29.00px] mt-[18px] text-[15px] text-black-900_cc tracking-[0.50px]">
                   <>
-                    Drones equipped with advanced mapping technologies
-                    contribute to accurate and rapid surveying of terrains,
-                    construction sites, and geographical features.
-                    <br />
-                    This aids in disaster response, and infrastructure
-                    development.
+                  Despite their numerous advantages, the proliferation of drones has raised concerns related to privacy, airspace safety, and potential misuse. Unauthorized drone flights near sensitive areas or crowded spaces pose risks, and the need for regulatory frameworks to address these challenges becomes increasingly apparent.
                   </>
                 </span>
               </Text>
-              <Text
-                className="leading-[29.00px] mt-[39px] text-black-900_01 text-xl tracking-[0.50px]"
-                size="txtLatoMedium20"
-              >
-                <span className="text-black-900_01 font-lato text-left text-base font-bold">
-                  <>
-                    Mapping and Surveying:
-                    <br />
-                  </>
-                </span>
-                <span className="leading-[29.00px] mt-[18px] text-[15px] text-black-900_cc tracking-[0.50px]">
-                  <>
-                    Drones equipped with advanced mapping technologies
-                    contribute to accurate and rapid surveying of terrains,
-                    construction sites, and geographical features.
-                    <br />
-                    This aids in disaster response, and infrastructure
-                    development.
-                  </>
-                </span>
-              </Text>
+              
             </div>
             <div className="flex md:flex-1 flex-col items-center justify-start w-[30%] md:w-full">
               <div className="bg-white-A700 flex flex-col items-center justify-start p-[49px] md:px-10 sm:px-5 rounded w-full">
-                <div className="flex flex-col items-start justify-start mb-2 w-[89%] md:w-full">
+                <form onSubmit={sendEmail} className=" flex flex-col items-start justify-start mb-2 w-[89%] md:w-full">
                   <div className="flex flex-col items-start justify-start w-full">
                     <Text
                       className="text-2xl md:text-[22px] text-gray-900_e5 sm:text-xl tracking-[0.24px]"
@@ -171,53 +176,45 @@ const ServicesPage = () => {
                     >
                       Get in Touch!
                     </Text>
-                    <div className="flex flex-col font-lato items-center justify-start mt-7 w-full">
-                      <Text
-                        className="border-b border-gray-600 border-solid sm:pr-5 pr-[35px] py-[13px] text-[15px] text-gray-600_a0 tracking-[1.20px]"
-                        size="txtLatoRegular15Gray600a0"
-                      >
-                        <span className="text-gray-600_a0 font-lato text-left font-normal">
-                          Full name{" "}
+                    <div className=" flex-col font-lato items-center justify-start mt-7 w-full">
+                    <input required onChange={e => handleChange(e.target.value, { name: "name" })} value={formData.name} name="name"
+ 
+  className="w-[70%] border-b border-gray-600  pr-[35px] py-[13px] text-[15px] text-gray-600_a0 tracking-[1.20px] placeholder-gray-600_a0"
+  placeholder="Full name *"
+/>
+
+
+                        {/* <span className="text-gray-600_a0 font-lato text-left font-normal">
+                       
                         </span>
                         <span className="text-red-900_a0 font-lato text-left font-normal">
-                          *
-                        </span>
-                      </Text>
+                          
+                        </span> */}
+                      
                     </div>
                     <div className="flex flex-col font-lato items-center justify-start mt-[23px] w-full">
-                      <Text
-                        className="border-b border-gray-600 border-solid sm:pr-5 pr-[35px] py-[13px] text-[15px] text-gray-600_a0 tracking-[1.20px]"
-                        size="txtLatoRegular15Gray600a0"
-                      >
-                        <span className="text-gray-600_a0 font-lato text-left font-normal">
-                          Email Id{" "}
-                        </span>
-                        <span className="text-red-900_a0_01 font-lato text-left font-normal">
-                          *
-                        </span>
-                      </Text>
+                    <input required onChange={e => handleChange(e.target.value, { name: "email" })} value={formData.email}
+                        className="ml-[-65px] w-[70%] border-b border-gray-600 border-solid sm:pr-5 pr-[35px] py-[13px] text-[15px] text-gray-600_a0 tracking-[1.20px]"
+                        placeholder="Email Id *"
+                      />
                     </div>
                     <div className="flex flex-col font-lato items-center justify-start mt-[23px] w-full">
-                      <Text
-                        className="border-b border-gray-600 border-solid sm:pr-5 pr-[35px] py-[13px] text-[15px] text-gray-600_a0 tracking-[1.20px]"
-                        size="txtLatoRegular15Gray600a0"
-                      >
-                        Company Name
-                      </Text>
+                    <input required name="company" onChange={e => handleChange(e.target.value, { name: "company" })} value={formData.company}
+                        className="ml-[-65px] w-[70%] border-b border-gray-600 border-solid sm:pr-5 pr-[35px] py-[13px] text-[15px] text-gray-600_a0 tracking-[1.20px]"
+                        placeholder="Company Name *"
+                      />
                     </div>
                     <div className="flex flex-col font-lato items-center justify-start mt-[23px] w-full">
-                      <Text
-                        className="border-b border-gray-600 border-solid sm:pr-5 pr-[35px] py-[13px] text-[15px] text-gray-600_a0 tracking-[1.20px]"
-                        size="txtLatoRegular15Gray600a0"
-                      >
-                        Phone Number
-                      </Text>
+                    <input required name="phoneNumber" onChange={e => handleChange(e.target.value, { name: "phoneNumber" })} value={formData.phoneNumber}
+                        className="w-[70%] ml-[-65px] border-b border-gray-600 border-solid sm:pr-5 pr-[35px] py-[13px] text-[15px] text-gray-600_a0 tracking-[1.20px]"
+                        placeholder="Phone Number *"
+                      />
                     </div>
                   </div>
                   <div className="flex flex-col items-center justify-start mt-[50px] w-[66%] md:w-full">
-                    <Button className="border border-orange-400 border-solid capitalize cursor-pointer font-medium h-11 leading-[normal] min-w-[155px] text-base text-center tracking-[0.16px]">
+                    <button type="submit" className="border border-orange-400 border-solid capitalize cursor-pointer font-medium h-11 leading-[normal] min-w-[155px] text-base text-center tracking-[0.16px]">
                       get in touch
-                    </Button>
+                    </button>
                   </div>
                   <Text
                     className="mt-[87px] text-2xl md:text-[22px] text-gray-900_e5 sm:text-xl tracking-[0.24px]"
@@ -264,7 +261,7 @@ const ServicesPage = () => {
                       @flankersecurity.com
                     </Text>
                   </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>

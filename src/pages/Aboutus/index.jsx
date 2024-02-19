@@ -11,9 +11,9 @@ const AboutusPage = () => {
   return (
     <>
       <div className="bg-white-A700 flex flex-col items-center justify-start mx-auto w-full">
-        <div className="flex flex-col items-center justify-start w-full">
+        <div className="flex flex-col items-center justify-start w-full mb-[-20px]">
           <div className="font-poppins md:h-[848px] h-[875px] md:px-5 relative w-full">
-            <div className="absolute h-[848px] inset-[0] justify-center m-auto w-full">
+            <div className="absolute h-[848px] inset-[0] justify-center  w-full">
               <Img
                 className="h-[848px] m-auto object-cover w-full"
                 src="images/img_rectangle21985.png"
@@ -77,11 +77,11 @@ const AboutusPage = () => {
                   properties.
                 </Text>
               </div>
-              <Img
+              {/* <Img
                 className="h-2.5"
                 src="images/img_contrast.svg"
                 alt="contrast"
-              />
+              /> */}
             </div>
           </div>
           {/* <div

@@ -37,7 +37,7 @@ const Footer = (props) => {
                   className="capitalize text-base text-white-A700_bc tracking-[0.25px]"
                   size="txtPoppinsRegular16"
                 >
-                  91007 92007
+                 +91 91007 92007
                 </Text>
               </div>
               <div className="flex flex-col gap-4 items-start justify-start">

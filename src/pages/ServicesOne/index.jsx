@@ -1,23 +1,116 @@
 import React from "react";
-
+import './ser.css'
 import { Banner, Button, Img, List, Text } from "components";
 import Footer from "components/Footer";
 import Header from "components/Header";
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { useNavigate } from "react-router-dom";
 
 const ServicesOnePage = () => {
+  const settings = {
+    dots: false, // Hide navigation dots
+    arrows: true, // Show navigation arrows
+    infinite: true, // Enable infinite looping
+    slidesToShow: 4, // Display 4 cards at a time
+    slidesToScroll: 1, // Scroll by 1 card at a time
+    responsive: [
+      {
+        breakpoint: 768, // Apply at screens wider than 768px
+        settings: {
+          slidesToShow: 3, // Display 3 cards on medium screens
+        },
+      },
+      {
+        breakpoint: 576, // Apply at screens wider than 576px
+        settings: {
+          slidesToShow: 2, // Display 2 cards on small screens
+        },
+      },
+    ],
+  };
+  const slides = [
+    { path: '/servicesone', image: 'images/img_guard_black_900.svg', alt: 'guard', title: 'Drones', description: 'Our counter-drone technology stands vigilant.' },
+    // Add more slides as needed
+  ];
+  const ser_data = [
+    {
+      path:'/drones',
+      image:'images/drones_yellow.svg',
+      hover:'images/drone.svg',
+      title:'Drones',
+      desc:'Our counter-drone  technology stands vigilant.'
+    },
+    {
+      path:'/training',
+      image:'images/sec_training_yellow.svg',
+      hover:'images/sec_training.svg',
+      title:'Security Training',
+      desc:'Our counter-drone technology stands vigilant.'
+    },
+    {
+      path:'/guards',
+      hover:'images/img_guard_black_900.svg',
+      image:"images/img_guard.svg",
+      title:'Security Guards',
+      desc:'Our counter-drone technology stands vigilant.'
+    },
+    {
+      path:'/infrastructure',
+      hover:'images/infra_black.svg',
+      image:'images/infra_yellow.svg',
+      title:'Security Infra',
+      desc:'Our counter-drone technology stands vigilant.'
+    },
+    {
+      path:'/risk-assessment',
+      hover:'images/Risk_black.svg',
+      image:'images/Risk_yellow.svg',
+      title:'Risk Assessment',
+      desc:'Our counter-drone technology stands vigilant.'
+    },
+    {
+      path:'/investigation',
+      hover:'images/img_guard_black_900.svg',
+      image:'images/img_guard.svg',
+      title:'Investigation',
+      desc:'Our counter-drone technology stands vigilant.'
+    },
+    {
+      path:'/security-audits',
+      image:'images/Audits_yellow.svg',
+      hover:'images/Audits_Black.svg',
+      title:'Security Audits',
+      desc:'Our counter-drone technology stands vigilant.'
+    },
+  ]
+  function handleMouseEnter(event, index, hoverImage) {
+    const elements = event.currentTarget.getElementsByClassName("vector");
+    if (elements.length > 0) {
+      elements[0].src = hoverImage;
+    }
+  }
+  
+  function handleMouseLeave(event, index, originalImage) {
+    const elements = event.currentTarget.getElementsByClassName("vector");
+    if (elements.length > 0) {
+      elements[0].src = originalImage;
+    }
+  }
+  
   const navigate = useNavigate()
   return (
     <>
-      <div className="bg-white-A700 flex flex-col font-poppins items-center justify-start mx-auto w-full">
-        <div className="md:h-[848px] h-[875px] md:px-5 relative w-full">
-          <div className="absolute h-[848px] inset-[0] justify-center m-auto w-full">
+      <div className="bg-white-A700 flex flex-col font-poppins items-center mb-[-20px] justify-start mx-auto w-full">
+        <div className="md:h-[848px] h-[875px] md:px-5 relative w-full ">
+          <div className="absolute h-[848px] inset-[0] justify-center  w-full">
             <Img
               className="h-[848px] m-auto object-cover w-full"
               src="images/img_rectangle21985_848x1440.png"
               alt="rectangle21985"
             />
-            <div className="absolute bottom-[13%] flex flex-col items-center justify-center w-full">
+            <div className="absolute bottom-[30%] flex flex-col items-center justify-center w-full">
               <Text
                 className="capitalize leading-[89.00px] md:text-5xl text-6xl text-center text-white-A700 tracking-[0.25px] w-[55%] sm:w-full"
                 size="txtPoppinsBold60"
@@ -30,7 +123,7 @@ const ServicesOnePage = () => {
               >
                 Trust the experts with your safety
               </Text>
-              <div className="flex flex-row items-start justify-between mt-[105px] w-[39%] md:w-full">
+              {/* <div className="flex flex-row items-start justify-between mt-[105px] w-[39%] md:w-full">
                 <Img
                   className="h-[30px]"
                   src="images/img_drone.svg"
@@ -41,12 +134,12 @@ const ServicesOnePage = () => {
                   src="images/img_television.svg"
                   alt="television"
                 />
-              </div>
+              </div> */}
             </div>
           </div>
           <Header className="absolute flex flex-col inset-x-[0] items-center justify-center mx-auto top-[0] w-full" />
         </div>
-        <div className="bg-gray-50 flex flex-col font-redhatdisplay items-center justify-end p-[52px] md:px-10 sm:px-5 w-full">
+        <div className=" bg-gray-50 flex flex-col font-redhatdisplay items-center justify-end p-[52px] md:px-10 sm:px-5 w-full">
           <div className="flex flex-col items-start justify-start max-w-[1239px] mt-[90px] mx-auto w-full">
             <div className="flex flex-col gap-[22px] items-start justify-start">
               <Text
@@ -62,7 +155,7 @@ const ServicesOnePage = () => {
                 Security Services
               </Text>
             </div>
-            <div className="flex md:flex-col flex-row font-opensans md:gap-[54px] items-center justify-between mt-[75px] w-full">
+            {/* <div className="flex md:flex-col flex-row font-opensans md:gap-[54px] items-center justify-between mt-[75px] w-full">
               <List
                 className="md:flex-1 sm:flex-col flex-row gap-[55px] grid sm:grid-cols-1 grid-cols-2 w-[48%] md:w-full"
                 orientation="horizontal"
@@ -146,12 +239,23 @@ const ServicesOnePage = () => {
                   </Text>
                 </div>
               </div>
+            </div> */}
+            <div className="ser_cont">
+              {
+                ser_data.map((data,index)=>(
+                  <div key={index} className="Single_cont" onClick={()=>navigate(data.path)} onMouseEnter={(e) => handleMouseEnter(e, index, data.hover)} onMouseLeave={(e) => handleMouseLeave(e, index, data.image)}>
+                    <img className="vector" src={data.image} alt="guard" />
+                    <Text  className="title leading-[24.00px] mb-[23px] mt-[3px] text-black-900_b2 text-sm tracking-[0.25px] w-full" size="txtOpenSansRomanSemiBold14">{data.title}</Text>
+                    <p className="desc">{data.desc}</p>
+                  </div>
+                ))
+              }
             </div>
-            <Img
+            {/* <Img
               className="h-2.5 md:ml-[0] ml-[604px] mt-20"
               src="images/img_contrast.svg"
               alt="contrast"
-            />
+            /> */}
           </div>
         </div>
         <div className="bg-gray-50 flex flex-col font-redhatdisplay items-end justify-start mt-[57px] md:pl-10 sm:pl-5 pl-[100px] w-full">
